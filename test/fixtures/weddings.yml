@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kuyov: MyString
+  kelin: MyString
+  card: MyString
+  tel: MyString
+  sana: MyString
+  soat: MyString
+  manzil: MyString
+
+two:
+  kuyov: MyString
+  kelin: MyString
+  card: MyString
+  tel: MyString
+  sana: MyString
+  soat: MyString
+  manzil: MyString
