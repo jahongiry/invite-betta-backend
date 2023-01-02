@@ -8,7 +8,7 @@ class Post < ApplicationRecord
 
   private
   def attach_image 
-    imaging = File.open('img/2.png')
-    self.image.attach(io: imaging, filename: '2.2', content_type: 'image/png')
+    imaging = File.open('img/4.png')
+    self.image.attach(io: imaging, filename: '4', content_type: 'image/png')
   end
 end
