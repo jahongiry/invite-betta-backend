@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mehmon: MyString
+  mezbon: MyString
+  card: MyString
+  tel: MyString
+  sana: 2023-01-02 14:37:47
+  manzil: MyString
+  soat: MyString
+
+two:
+  mehmon: MyString
+  mezbon: MyString
+  card: MyString
+  tel: MyString
+  sana: 2023-01-02 14:37:47
+  manzil: MyString
+  soat: MyString

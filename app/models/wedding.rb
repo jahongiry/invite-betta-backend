@@ -113,7 +113,7 @@ class Wedding < ApplicationRecord
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
         File.delete(image_io)
 
-        when "4"
+        when "3"
         #Invitaion template 3
         if self.kuyov.length > 6
           path = Rails.root.join("img/3empty2.png")
@@ -150,7 +150,7 @@ class Wedding < ApplicationRecord
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
         File.delete(image_io)
 
-       when "5"
+       when "4"
         #Invitaion template 4
         path = Rails.root.join("img/4empty.png")
         image = Magick::Image.read(path).first

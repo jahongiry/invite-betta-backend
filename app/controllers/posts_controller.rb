@@ -42,7 +42,7 @@ class PostsController < ApplicationController
     images = Post.all
     imagesAll = []
     images.each do |image|
-      imagesAll.append([image.id, image.image_url])
+      imagesAll.append([image.title, image.image_url])
     end
     render json: imagesAll
   end
