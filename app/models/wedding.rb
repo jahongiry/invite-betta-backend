@@ -75,7 +75,7 @@ class Wedding < ApplicationRecord
         text.pointsize = 40
         text.font = "fonts/Metal-Regular.ttf"
         text.annotate(image, 0, 0, 550, 1280, "Manzil: #{self.manzil}")
-        image.write("temp_img/1.png")
+        image.write("public/temp_img/1.png")
         image_io = File.open("public/temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
 
