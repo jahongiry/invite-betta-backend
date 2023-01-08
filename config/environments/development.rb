@@ -1,7 +1,7 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.routes.default_url_options = {
-  host: 'https://octopus-app-iohhm.ondigitalocean.app/'
+  host: 'https://octopus-app-iohhm.ondigitalocean.app'
 }
 
 Rails.application.configure do

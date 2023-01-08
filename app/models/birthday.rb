@@ -1,5 +1,4 @@
 class Birthday < ApplicationRecord
-   
   include Magick
   has_one_attached :image
   after_create :attach_image
@@ -68,7 +67,6 @@ class Birthday < ApplicationRecord
         image.write("temp_img/1.png")
         image_io = File.open("temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
-        File.delete(image_io)
 
         when "1.2"
         #Invitaion template 2
@@ -105,7 +103,6 @@ class Birthday < ApplicationRecord
         image.write("temp_img/1.png")
         image_io = File.open("temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
-        File.delete(image_io)
 
          when "1.3"
         #Invitaion template 3
@@ -148,7 +145,6 @@ class Birthday < ApplicationRecord
         image.write("temp_img/1.png")
         image_io = File.open("temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
-        File.delete(image_io)
     end
   end
 end

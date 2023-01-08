@@ -9,7 +9,6 @@ class Wedding < ApplicationRecord
 
   private
   def attach_image
-    
     daysUpper = {1 => "DUYSHANBA",
             2 => "SESHANBA", 
             3 => "CHORSHANBA",
@@ -79,7 +78,6 @@ class Wedding < ApplicationRecord
         image.write("temp_img/1.png")
         image_io = File.open("temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
-        File.delete(image_io)
 
       when "2"
         #Invitaion template 2
@@ -117,7 +115,6 @@ class Wedding < ApplicationRecord
         else 
           text.annotate(image, 0, 0, center, 725, "Assalomu alekum, aziz mehmonimiz!")
         end
-        
          weekcenter = 385
         text.pointsize = 30
         if self.sana.wday == 5 || self.sana.wday == 6
@@ -134,7 +131,7 @@ class Wedding < ApplicationRecord
         image.write("temp_img/1.png")
         image_io = File.open("temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
-        File.delete(image_io)
+        
 
         when "3"
         path = Rails.root.join("img/3mehmon.png")
@@ -178,7 +175,6 @@ class Wedding < ApplicationRecord
         image.write("temp_img/1.png")
         image_io = File.open("temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
-        File.delete(image_io)
 
        when "4"
         #Invitaion template 4
@@ -235,7 +231,6 @@ class Wedding < ApplicationRecord
         image.write("temp_img/1.png")
         image_io = File.open("temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
-        File.delete(image_io)
     end
   end
 end
