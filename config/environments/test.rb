@@ -1,4 +1,7 @@
 require "active_support/core_ext/integer/time"
+Rails.application.routes.default_url_options = {
+  host: 'https://octopus-app-iohhm.ondigitalocean.app/'
+}
 
 # The test environment is used exclusively to run your application's
 # test suite. You never need to work with it otherwise. Remember that
