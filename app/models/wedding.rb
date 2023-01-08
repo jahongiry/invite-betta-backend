@@ -76,7 +76,7 @@ class Wedding < ApplicationRecord
         text.font = "fonts/Metal-Regular.ttf"
         text.annotate(image, 0, 0, 550, 1280, "Manzil: #{self.manzil}")
         image.write("temp_img/1.png")
-        image_io = File.open("temp_img/1.png")
+        image_io = File.open("public/temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
 
       when "2"
@@ -131,7 +131,6 @@ class Wedding < ApplicationRecord
         image.write("temp_img/1.png")
         image_io = File.open("temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
-        
 
         when "3"
         path = Rails.root.join("img/3mehmon.png")
