@@ -1,5 +1,4 @@
 class Wedding < ApplicationRecord
-
   include Magick
   has_one_attached :image
   after_create :attach_image

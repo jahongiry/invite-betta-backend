@@ -25,7 +25,7 @@ class Birthday < ApplicationRecord
             6 => "Shanba",
             0 => "Yakshanba"}
  case self.card
-      when "1birthday"
+      when "1.1"
         #Invitaion template 1
         path = Rails.root.join("img/1.1empty.png")
         image = Magick::Image.read(path).first
@@ -70,7 +70,7 @@ class Birthday < ApplicationRecord
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
         File.delete(image_io)
 
-        when "2birthday"
+        when "1.2"
         #Invitaion template 2
         path = Rails.root.join("img/1.2empty.png")
         image = Magick::Image.read(path).first
@@ -107,7 +107,7 @@ class Birthday < ApplicationRecord
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
         File.delete(image_io)
 
-         when "3birthday"
+         when "1.3"
         #Invitaion template 3
         path = Rails.root.join("img/1.3empty.png")
         image = Magick::Image.read(path).first
