@@ -128,8 +128,8 @@ class Wedding < ApplicationRecord
         text.pointsize = 55
         text.font = "fonts/CormorantSC-Light.ttf"
         text.annotate(image, 0, 0, 380, 1200, "manzil: #{self.manzil.downcase}")
-        image.write("temp_img/1.png")
-        image_io = File.open("temp_img/1.png")
+        image.write("public/temp_img/1.png")
+        image_io = File.open("public/temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
 
         when "3"
@@ -171,8 +171,8 @@ class Wedding < ApplicationRecord
         else 
           text.annotate(image, 0, 0, center, 810, "Assalomu alekum, aziz mehmonimiz!")
         end
-        image.write("temp_img/1.png")
-        image_io = File.open("temp_img/1.png")
+        image.write("public/temp_img/1.png")
+        image_io = File.open("public/temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
 
        when "4"
@@ -227,8 +227,8 @@ class Wedding < ApplicationRecord
         else 
           text.annotate(image, 0, 0, 480, 705, "A S S A L O M U A L E K U M ,  A Z I Z  M E H M O N I M I Z !")
         end
-        image.write("temp_img/1.png")
-        image_io = File.open("temp_img/1.png")
+        image.write("public/temp_img/1.png")
+        image_io = File.open("public/temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
     end
   end

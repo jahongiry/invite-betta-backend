@@ -64,8 +64,8 @@ class Birthday < ApplicationRecord
         text.annotate(image, 0, 0, 960, 1225, "soat: #{self.soat} da")
         text.pointsize = 150
         text.annotate(image, 0, 0, 779, 1165, "#{self.sana.strftime("%d")}")
-        image.write("temp_img/1.png")
-        image_io = File.open("temp_img/1.png")
+        image.write("public/temp_img/1.png")
+        image_io = File.open("public/temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
 
         when "1.2"
@@ -100,8 +100,8 @@ class Birthday < ApplicationRecord
         text.pointsize = 36
         text.fill = '#E36D56'
         text.annotate(image, 0, 0, 578, 1555, "MANZIL: #{self.manzil.upcase}")
-        image.write("temp_img/1.png")
-        image_io = File.open("temp_img/1.png")
+        image.write("public/temp_img/1.png")
+        image_io = File.open("public/temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
 
          when "1.3"
@@ -142,8 +142,8 @@ class Birthday < ApplicationRecord
         text.pointsize = 45
         text.fill = '#000000'
         text.annotate(image, 0, 0, 120, 1470, "MANZIL: #{self.manzil.upcase}")
-        image.write("temp_img/1.png")
-        image_io = File.open("temp_img/1.png")
+        image.write("public/temp_img/1.png")
+        image_io = File.open("public/temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
     end
   end
