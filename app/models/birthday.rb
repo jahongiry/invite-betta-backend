@@ -64,6 +64,10 @@ class Birthday < ApplicationRecord
         text.annotate(image, 0, 0, 960, 1225, "soat: #{self.soat} da")
         text.pointsize = 150
         text.annotate(image, 0, 0, 779, 1165, "#{self.sana.strftime("%d")}")
+        text.pointsize = 40
+        text.font = "fonts/Metal-Regular.ttf"
+        text.fill = '#865F4C'
+        text.annotate(image, 0, 0, 1300, 25, "www.taklifnoma.com")
         image.write("public/temp_img/1.png")
         image_io = File.open("public/temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
@@ -100,6 +104,10 @@ class Birthday < ApplicationRecord
         text.pointsize = 36
         text.fill = '#E36D56'
         text.annotate(image, 0, 0, 578, 1555, "MANZIL: #{self.manzil.upcase}")
+        text.pointsize = 40
+        text.font = "fonts/Metal-Regular.ttf"
+        text.fill = '#865F4C'
+        text.annotate(image, 0, 0, 1300, 25, "www.taklifnoma.com")
         image.write("public/temp_img/1.png")
         image_io = File.open("public/temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
@@ -142,6 +150,10 @@ class Birthday < ApplicationRecord
         text.pointsize = 45
         text.fill = '#000000'
         text.annotate(image, 0, 0, 120, 1470, "MANZIL: #{self.manzil.upcase}")
+        text.pointsize = 40
+        text.font = "fonts/Metal-Regular.ttf"
+        text.fill = '#865F4C'
+        text.annotate(image, 0, 0, 1300, 25, "www.taklifnoma.com")
         image.write("public/temp_img/1.png")
         image_io = File.open("public/temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')

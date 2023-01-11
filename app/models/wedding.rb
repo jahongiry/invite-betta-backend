@@ -75,6 +75,8 @@ class Wedding < ApplicationRecord
         text.pointsize = 40
         text.font = "fonts/Metal-Regular.ttf"
         text.annotate(image, 0, 0, 550, 1280, "Manzil: #{self.manzil}")
+       text.fill = '#865F4C'
+       text.annotate(image, 0, 0, 1300, 25, "www.taklifnoma.com")
         image.write("public/temp_img/1.png")
         image_io = File.open("public/temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
@@ -128,6 +130,10 @@ class Wedding < ApplicationRecord
         text.pointsize = 55
         text.font = "fonts/CormorantSC-Light.ttf"
         text.annotate(image, 0, 0, 380, 1200, "manzil: #{self.manzil.downcase}")
+        text.pointsize = 40
+        text.font = "fonts/Metal-Regular.ttf"
+        text.fill = '#865F4C'
+        text.annotate(image, 0, 0, 1300, 25, "www.taklifnoma.com")
         image.write("public/temp_img/1.png")
         image_io = File.open("public/temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
@@ -171,6 +177,10 @@ class Wedding < ApplicationRecord
         else 
           text.annotate(image, 0, 0, center, 810, "Assalomu alekum, aziz mehmonimiz!")
         end
+        text.pointsize = 40
+        text.font = "fonts/Metal-Regular.ttf"
+        text.fill = '#865F4C'
+        text.annotate(image, 0, 0, 1300, 25, "www.taklifnoma.com")
         image.write("public/temp_img/1.png")
         image_io = File.open("public/temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
@@ -227,6 +237,10 @@ class Wedding < ApplicationRecord
         else 
           text.annotate(image, 0, 0, 480, 705, "A S S A L O M U A L E K U M ,  A Z I Z  M E H M O N I M I Z !")
         end
+        text.pointsize = 40
+        text.font = "fonts/Metal-Regular.ttf"
+        text.fill = '#865F4C'
+        text.annotate(image, 0, 0, 1300, 25, "www.taklifnoma.com")
         image.write("public/temp_img/1.png")
         image_io = File.open("public/temp_img/1.png")
         self.image.attach(io: image_io, filename: "#{self.card}", content_type: 'image/png')
